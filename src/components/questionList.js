@@ -1,4 +1,4 @@
-export default [
+const questionList = [
   {
     id: 1,
     question: "What is the capital of France?",
@@ -221,3 +221,5 @@ export default [
     correctAnswer: "Blue Whale"
   }
 ];
+
+export default questionList;

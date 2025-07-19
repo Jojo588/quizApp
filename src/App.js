@@ -9,26 +9,23 @@ import Results from './pages/Results';
 
 function App() {
   const [results, setResults] = useState([]);
-// function to reset quiz
-
-
-const resetQuiz = () => {
-  setResults([]);
-  // You can also reset questions here if needed
-};
+  // function to reset quiz
+  const resetQuiz = () => {
+    setResults([]);
+  };
 
   return(
-<>
-<BrowserRouter>
-    <Routes>
-        <Route index element={<Home />}/>
-        <Route path='*' element={<NoPage />}/>
-        <Route path='quiz' element={<Quiz questions ={questionList} setResults={setResults}/>}/>
-        <Route path='results' element={<Results results={results} questions ={questionList} resetQuiz = {resetQuiz}/>}/> 
+    <>
+      <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/quizApp' : '/'}>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="quiz" element={<Quiz questions={questionList} setResults={setResults} />} />
+          <Route path="results" element={<Results results={results} questions={questionList} resetQuiz={resetQuiz} />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </BrowserRouter>
 
-    </Routes>
-</BrowserRouter>
-</>
+    </>
   )
 
  

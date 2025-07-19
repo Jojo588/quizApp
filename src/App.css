@@ -13,7 +13,6 @@ body {
   padding: 2rem;
 }
 
-/* Home Page */
 .home {
   position: absolute;
   left: 50%;
@@ -29,7 +28,6 @@ body {
   animation: startQuiz 3s infinite ease-in-out;
 }
 
-/* Quiz Box */
 .quizInterface {
   background-color: #292942;
   color: #ffffff;
@@ -46,7 +44,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* Options List */
 .quizInterface ul li {
   list-style: none;
   background-color: #3d3d5c;
@@ -112,7 +109,6 @@ body {
   opacity: 0.95;
 }
 
-/* Button Group */
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -127,7 +123,6 @@ body {
   100% { transform: scale(0.95); opacity: 0.8; }
 }
 
-/* Paragraphs */
 p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
